@@ -6,8 +6,8 @@
    python servidor.py
 
 ## 2) node.js (Express)
-npm init -y
-npm install express
+npm init -y.
+npm install express.
 
 luego ejecutas el servidor
    node server.js

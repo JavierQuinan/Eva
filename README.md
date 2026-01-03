@@ -1,4 +1,4 @@
-# 🖥️ Eva - Servidor Web Dual
+# DualServer - Servidor Web Educativo
 
 <div align="center">
 
@@ -15,63 +15,63 @@
 
 ---
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
-- [📖 Descripción](#-descripción)
-- [✨ Características](#-características)
-- [🛠️ Tecnologías Usadas](#️-tecnologías-usadas)
-- [📦 Requisitos Previos](#-requisitos-previos)
-- [🚀 Instalación](#-instalación)
-- [💻 Uso](#-uso)
-- [🔗 Endpoints API](#-endpoints-api)
-- [📁 Estructura del Proyecto](#-estructura-del-proyecto)
-- [🤝 Contribuir](#-contribuir)
-- [📄 Licencia](#-licencia)
+- [Descripcion](#descripcion)
+- [Caracteristicas](#caracteristicas)
+- [Tecnologias Usadas](#tecnologias-usadas)
+- [Requisitos Previos](#requisitos-previos)
+- [Instalacion](#instalacion)
+- [Uso](#uso)
+- [Endpoints API](#endpoints-api)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
 
 ---
 
-## 📖 Descripción
+## Descripcion
 
-**Eva** es un proyecto educativo que implementa servidores web básicos en dos lenguajes de programación diferentes:
+**DualServer** es un proyecto educativo que implementa servidores web basicos en dos lenguajes de programacion diferentes:
 - **Node.js** con Express.js
-- **Python** con el módulo `http.server`
+- **Python** con el modulo `http.server`
 
 Este proyecto es ideal para aprender los fundamentos de desarrollo backend y comparar las implementaciones entre ambos lenguajes.
 
 ---
 
-## ✨ Características
+## Caracteristicas
 
-- 🌐 Servidor HTTP funcional en Node.js y Python
-- 🛣️ Múltiples rutas y endpoints
-- 📊 API REST con respuestas JSON
-- ⚡ Respuestas rápidas y eficientes
-- 🔧 Fácil de configurar y extender
-- 📚 Código comentado y educativo
+- Servidor HTTP funcional en Node.js y Python
+- Multiples rutas y endpoints
+- API REST con respuestas JSON
+- Respuestas rapidas y eficientes
+- Facil de configurar y extender
+- Codigo comentado y educativo
 
 ---
 
-## 🛠️ Tecnologías Usadas
+## Tecnologias Usadas
 
-| Tecnología | Versión | Descripción |
+| Tecnologia | Version | Descripcion |
 |------------|---------|-------------|
-| ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | 18+ | Entorno de ejecución JavaScript |
-| ![Express](https://img.shields.io/badge/-Express-000000?style=flat&logo=express&logoColor=white) | 5.1.0 | Framework web para Node.js |
-| ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white) | 3.8+ | Lenguaje de programación |
-| ![npm](https://img.shields.io/badge/-npm-CB3837?style=flat&logo=npm&logoColor=white) | 9+ | Gestor de paquetes |
+| Node.js | 18+ | Entorno de ejecucion JavaScript |
+| Express | 5.1.0 | Framework web para Node.js |
+| Python | 3.8+ | Lenguaje de programacion |
+| npm | 9+ | Gestor de paquetes |
 
 ---
 
-## 📦 Requisitos Previos
+## Requisitos Previos
 
-Antes de comenzar, asegúrate de tener instalado:
+Antes de comenzar, asegurate de tener instalado:
 
 ### Para Node.js:
 - **Node.js** (v18 o superior) - [Descargar](https://nodejs.org/)
 - **npm** (incluido con Node.js)
 
 ```bash
-# Verificar instalación
+# Verificar instalacion
 node --version
 npm --version
 ```
@@ -80,13 +80,13 @@ npm --version
 - **Python 3** (v3.8 o superior) - [Descargar](https://python.org/)
 
 ```bash
-# Verificar instalación
+# Verificar instalacion
 python --version
 ```
 
 ---
 
-## 🚀 Instalación
+## Instalacion
 
 1. **Clonar el repositorio**
 ```bash
@@ -101,88 +101,88 @@ npm install
 
 ---
 
-## 💻 Uso
+## Uso
 
-### 🟢 Servidor Node.js (Express)
+### Servidor Node.js (Express)
 
 ```bash
-# Método 1: Usando npm
+# Metodo 1: Usando npm
 npm start
 
-# Método 2: Directamente con node
+# Metodo 2: Directamente con node
 node server.js
 ```
 
-El servidor estará disponible en: `http://localhost:8000`
+El servidor estara disponible en: `http://localhost:8000`
 
-### 🐍 Servidor Python
+### Servidor Python
 
 ```bash
 python servidor.py
 ```
 
-El servidor estará disponible en: `http://localhost:8000`
+El servidor estara disponible en: `http://localhost:8000`
 
-> ⚠️ **Nota:** Ambos servidores usan el puerto 8000, por lo que solo puedes ejecutar uno a la vez.
+> **Nota:** Ambos servidores usan el puerto 8000, por lo que solo puedes ejecutar uno a la vez.
 
 ---
 
-## 🔗 Endpoints API
+## Endpoints API
 
 ### Servidor Node.js (Express)
 
-| Método | Endpoint | Descripción |
+| Metodo | Endpoint | Descripcion |
 |--------|----------|-------------|
-| `GET` | `/` | Página de inicio |
-| `GET` | `/api/info` | Información del servidor |
+| `GET` | `/` | Pagina de inicio |
+| `GET` | `/api/info` | Informacion del servidor |
 | `GET` | `/api/health` | Estado de salud del servidor |
 | `GET` | `/api/tiempo` | Fecha y hora actual |
 
 ### Servidor Python
 
-| Método | Endpoint | Descripción |
+| Metodo | Endpoint | Descripcion |
 |--------|----------|-------------|
-| `GET` | `/` | Página de inicio |
-| `GET` | `/api/info` | Información del servidor |
+| `GET` | `/` | Pagina de inicio |
+| `GET` | `/api/info` | Informacion del servidor |
 | `GET` | `/api/health` | Estado de salud del servidor |
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
-Eva/
-├── 📄 server.js        # Servidor Node.js con Express
-├── 📄 servidor.py      # Servidor Python
-├── 📄 package.json     # Configuración y dependencias npm
-├── 📄 README.md        # Documentación del proyecto
-└── 📄 .gitignore       # Archivos ignorados por Git
+DualServer/
+├── server.js        # Servidor Node.js con Express
+├── servidor.py      # Servidor Python
+├── package.json     # Configuracion y dependencias npm
+├── README.md        # Documentacion del proyecto
+└── .gitignore       # Archivos ignorados por Git
 ```
 
 ---
 
-## 🤝 Contribuir
+## Contribuir
 
-¡Las contribuciones son bienvenidas! Para contribuir:
+Las contribuciones son bienvenidas. Para contribuir:
 
 1. Haz un Fork del proyecto
 2. Crea una rama para tu feature (`git checkout -b feature/NuevaCaracteristica`)
-3. Haz commit de tus cambios (`git commit -m 'Agregar nueva característica'`)
+3. Haz commit de tus cambios (`git commit -m 'Agregar nueva caracteristica'`)
 4. Haz Push a la rama (`git push origin feature/NuevaCaracteristica`)
 5. Abre un Pull Request
 
 ---
 
-## 📄 Licencia
+## Licencia
 
-Este proyecto está bajo la Licencia ISC. Ver el archivo `LICENSE` para más detalles.
+Este proyecto esta bajo la Licencia ISC. Ver el archivo `LICENSE` para mas detalles.
 
 ---
 
 <div align="center">
 
-**⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub ⭐**
+**Si este proyecto te fue util, considera darle una estrella en GitHub**
 
-Hecho con ❤️ por [Javier Quiñan](https://github.com/JavierQuinan)
+Hecho por [Javier Quinan](https://github.com/JavierQuinan)
 
 </div>

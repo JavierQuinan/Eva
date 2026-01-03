@@ -1,23 +1,33 @@
 {
   "name": "eva",
   "version": "1.0.0",
+  "description": "Servidor web dual educativo - Node.js y Python",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "python": "python servidor.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JavierQuinan/Eva.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "servidor",
+    "express",
+    "nodejs",
+    "python",
+    "educativo",
+    "api",
+    "rest"
+  ],
+  "author": "Javier Quiñan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JavierQuinan/Eva/issues"
   },
   "homepage": "https://github.com/JavierQuinan/Eva#readme",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
   }

@@ -1,188 +1,69 @@
-# DualServer - Servidor Web Educativo
+# DualServer / Eva — Node.js + Python HTTP foundations
 
-<div align="center">
+> **CONSOLIDATED / HISTORICAL SOURCE**
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+## ES
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JavierQuinan/Eva)
+Este repositorio se conserva temporalmente como fuente histórica del ejercicio DualServer. La parte útil ya fue curada y refactorizada dentro de:
 
-**Un proyecto educativo que demuestra cómo crear servidores web tanto en Node.js como en Python**
+`JavierQuinan/Proyectos` → `foundations/http/`
 
-</div>
+La versión consolidada conserva la comparación entre un servidor Node.js/Express y uno Python `http.server`, pero elimina HTML de presentación innecesario, acoplamiento con nombres del repo original y CORS wildcard. También mejora testabilidad, timestamps y binding local por defecto.
 
----
+Este repositorio ya no debe recibir nuevas features ni utilizarse como evidencia principal del portfolio. Su siguiente estado recomendado es **archivado** y, después de conservar el snapshot necesario, puede evaluarse su eliminación definitiva.
 
-## Tabla de Contenidos
+### Qué se preservó
 
-- [Descripcion](#descripcion)
-- [Caracteristicas](#caracteristicas)
-- [Tecnologias Usadas](#tecnologias-usadas)
-- [Requisitos Previos](#requisitos-previos)
-- [Instalacion](#instalacion)
-- [Uso](#uso)
-- [Endpoints API](#endpoints-api)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Contribuir](#contribuir)
-- [Licencia](#licencia)
+- endpoints HTTP equivalentes;
+- health/info JSON;
+- logging de requests;
+- manejo 404;
+- comparación framework vs librería estándar.
 
----
+### Qué se refactorizó
 
-## Descripcion
+- Node.js expone `createApp()` para facilitar pruebas;
+- Python utiliza `ThreadingHTTPServer`;
+- timestamps UTC;
+- binding a `127.0.0.1` por defecto;
+- eliminación de CORS permisivo no necesario;
+- eliminación de UI inline para concentrar el ejemplo en fundamentos HTTP.
 
-**DualServer** es un proyecto educativo que implementa servidores web basicos en dos lenguajes de programacion diferentes:
-- **Node.js** con Express.js
-- **Python** con el modulo `http.server`
-
-Este proyecto es ideal para aprender los fundamentos de desarrollo backend y comparar las implementaciones entre ambos lenguajes.
+Destino consolidado:
+https://github.com/JavierQuinan/Proyectos/tree/main/foundations/http
 
 ---
 
-## Caracteristicas
+## EN
 
-- Servidor HTTP funcional en Node.js y Python
-- Multiples rutas y endpoints
-- API REST con respuestas JSON
-- Respuestas rapidas y eficientes
-- Facil de configurar y extender
-- Codigo comentado y educativo
+This repository is temporarily preserved as the historical source for the DualServer exercise. The useful material has already been curated and refactored into:
 
----
+`JavierQuinan/Proyectos` → `foundations/http/`
 
-## Tecnologias Usadas
+The consolidated version preserves the comparison between a Node.js/Express server and Python `http.server`, while removing unnecessary presentation HTML, coupling to original repository names and wildcard CORS. It also improves testability, timestamps and local-only binding defaults.
 
-| Tecnologia | Version | Descripcion |
-|------------|---------|-------------|
-| Node.js | 18+ | Entorno de ejecucion JavaScript |
-| Express | 5.1.0 | Framework web para Node.js |
-| Python | 3.8+ | Lenguaje de programacion |
-| npm | 9+ | Gestor de paquetes |
+This repository should no longer receive new features or be used as primary portfolio evidence. Its recommended next state is **archived**, and after the required snapshot is preserved it can be evaluated for final deletion.
 
----
+### Preserved
 
-## Requisitos Previos
+- equivalent HTTP endpoints;
+- JSON health/info responses;
+- request logging;
+- 404 handling;
+- framework vs standard-library comparison.
 
-Antes de comenzar, asegurate de tener instalado:
+### Refactored
 
-### Para Node.js:
-- **Node.js** (v18 o superior) - [Descargar](https://nodejs.org/)
-- **npm** (incluido con Node.js)
+- Node.js exports `createApp()` for testability;
+- Python uses `ThreadingHTTPServer`;
+- UTC timestamps;
+- loopback binding by default;
+- unnecessary permissive CORS removed;
+- inline UI removed to keep the example focused on HTTP fundamentals.
 
-```bash
-# Verificar instalacion
-node --version
-npm --version
-```
+Consolidated destination:
+https://github.com/JavierQuinan/Proyectos/tree/main/foundations/http
 
-### Para Python:
-- **Python 3** (v3.8 o superior) - [Descargar](https://python.org/)
+## License
 
-```bash
-# Verificar instalacion
-python --version
-```
-
----
-
-## Instalacion
-
-1. **Clonar el repositorio**
-```bash
-git clone https://github.com/JavierQuinan/Eva.git
-cd Eva
-```
-
-2. **Instalar dependencias de Node.js**
-```bash
-npm install
-```
-
----
-
-## Uso
-
-### Servidor Node.js (Express)
-
-```bash
-# Metodo 1: Usando npm
-npm start
-
-# Metodo 2: Directamente con node
-node server.js
-```
-
-El servidor estara disponible en: `http://localhost:8000`
-
-### Servidor Python
-
-```bash
-python servidor.py
-```
-
-El servidor estara disponible en: `http://localhost:8000`
-
-> **Nota:** Ambos servidores usan el puerto 8000, por lo que solo puedes ejecutar uno a la vez.
-
----
-
-## Endpoints API
-
-### Servidor Node.js (Express)
-
-| Metodo | Endpoint | Descripcion |
-|--------|----------|-------------|
-| `GET` | `/` | Pagina de inicio |
-| `GET` | `/api/info` | Informacion del servidor |
-| `GET` | `/api/health` | Estado de salud del servidor |
-| `GET` | `/api/tiempo` | Fecha y hora actual |
-
-### Servidor Python
-
-| Metodo | Endpoint | Descripcion |
-|--------|----------|-------------|
-| `GET` | `/` | Pagina de inicio |
-| `GET` | `/api/info` | Informacion del servidor |
-| `GET` | `/api/health` | Estado de salud del servidor |
-
----
-
-## Estructura del Proyecto
-
-```
-DualServer/
-├── server.js        # Servidor Node.js con Express
-├── servidor.py      # Servidor Python
-├── package.json     # Configuracion y dependencias npm
-├── README.md        # Documentacion del proyecto
-└── .gitignore       # Archivos ignorados por Git
-```
-
----
-
-## Contribuir
-
-Las contribuciones son bienvenidas. Para contribuir:
-
-1. Haz un Fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/NuevaCaracteristica`)
-3. Haz commit de tus cambios (`git commit -m 'Agregar nueva caracteristica'`)
-4. Haz Push a la rama (`git push origin feature/NuevaCaracteristica`)
-5. Abre un Pull Request
-
----
-
-## Licencia
-
-Este proyecto esta bajo la Licencia ISC. Ver el archivo `LICENSE` para mas detalles.
-
----
-
-<div align="center">
-
-**Si este proyecto te fue util, considera darle una estrella en GitHub**
-
-Hecho por [Javier Quinan](https://github.com/JavierQuinan)
-
-</div>
+ISC — see `LICENSE`.
